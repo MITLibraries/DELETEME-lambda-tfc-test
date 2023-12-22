@@ -15,17 +15,17 @@ env:
 
 jobs:
     terraform-cloud-apply-run:
-    runs-on: ubuntu-latest
-    ## OPTIONAL: can scope variables to this specific job
-    ## Example:
-    # env:
-    #  TF_CLOUD_ORGANIZATION: ${{ secrets.TF_CLOUD_ORG }}
-    steps:
+        runs-on: ubuntu-latest
+        ## OPTIONAL: can scope variables to this specific job
+        ## Example:
+        # env:
+        #  TF_CLOUD_ORGANIZATION: ${{ secrets.TF_CLOUD_ORG }}
+        steps:
         - uses: actions/checkout@v3
 
         - uses: hashicorp/tfc-workflows-github/actions/create-run@v1.1.1
-        id: create-run
-        with:
+          id: create-run
+          with:
             message: "Triggered from Lambda repo"
             workspace: ${{ vars.TF_CLOUD_WORKSPACE }}
 
