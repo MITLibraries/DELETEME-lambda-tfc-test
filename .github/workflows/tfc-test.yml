@@ -21,7 +21,7 @@ jobs:
         # env:
         #  TF_CLOUD_ORGANIZATION: ${{ secrets.TF_CLOUD_ORG }}
         steps:
-        - uses: actions/checkout@v3
+        - uses: actions/checkout@v4
 
         - uses: hashicorp/tfc-workflows-github/actions/create-run@v1.1.1
           id: create-run
