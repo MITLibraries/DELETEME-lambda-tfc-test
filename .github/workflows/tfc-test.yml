@@ -23,7 +23,7 @@ jobs:
         steps:
         - uses: actions/checkout@v3
 
-        - uses: hashicorp/tfc-workflows-github/actions/create-run@v1.1.1
+        - uses: hashicorp/tfc-workflows-github/actions/create-run@v1.2.0
           id: create-run
           with:
             message: "Triggered from Lambda repo"
